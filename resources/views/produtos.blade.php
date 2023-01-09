@@ -13,24 +13,16 @@
         <a href="/">| HOME |</a>
     </spam>
         
-    <p>Equipe:</p>
     
-    @foreach ($chaveNomes as $nome)
-    <spam>{{$nome}},</spam>
-    @endforeach
-    
-    <p>Email: {{$chaveEmail}}</p>
-    <p>Telefone: {{$chaveTelefone}}</p>
-    
-    @for($i = 0; $i < count($chaveArray);  $i++)
-        {{-- este é um comentário do blade, portanto não aparecerá no HTML --}}
-        <spam>{{$chaveArray[$i]}}</spam>
-        
-        @if($i == 2)
-        <p>chave do {{$chaveArray[$i]}} é igual a 2</p>
-        @endif
-    @endfor
-    {{-- <img src="/img/banner.jpg" alt=""> --}}
-    
+    <a href="/produto_teste/id=90">produto buscar</a>
+
+<br>
+    <a href="/produtos/?search=sapato">Fazer buscar por SAPATO</a>
+
+
+    @if($busca != '')
+        <p>o usuario esta buscando por {{$busca}}</p>
+    @endif
+
 {{-- indicar o fim do conteudo para a section do blade --}}
 @endsection     

@@ -18,16 +18,14 @@ Route::get('/', function () {
 });
 
 Route::get('/produtos', function () {
-    $email = "coticproeg@gmail.com";
-    $telefone = 9132017909;
-    $array = [10,25,36,44,59];
-    $nomes = ["Rafael","Carol","Tácio","Fabio","Israel","Diego","Fabian"];
+    
+    $busca  = request('search');
 
-    return view('produtos',
-        [
-        'chaveEmail'=> $email,
-        'chaveTelefone' => $telefone,
-        'chaveArray' => $array,
-        'chaveNomes' => $nomes
-        ]);
+    return view('produtos', ['busca' => $busca]);
+
+});
+
+Route::get('/produto_teste/{id?}', function ($id = 1) {
+    
+    return view('produto', ['id' => $id ]);
 });
