@@ -5,13 +5,13 @@
 @section('content')
 
 
+<h1>Aqui estão os contatos</h1>
     <spam>
 
-        <a href="/">HOME</a>
+        <a href="/">home</a>
 
     </spam>
 
-    <p>busca do produto id: {{$id}}</p>
 
 
 @endsection

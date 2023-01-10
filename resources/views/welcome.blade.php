@@ -7,9 +7,11 @@
        
 <div class="texte-center">
     <spam>
-        HOME | 
-
-        <a href="/produtos">Produtos</a>
+        <a href="/">
+            <ion-icon name="home-outline"></ion-icon>home
+        </a>
+        <a href="/contatos">Contatos</a>
+        <a href="/produtos">produtos</a>
 
     </spam>
 
