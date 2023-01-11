@@ -6,8 +6,12 @@
 
     <div id="event-create-container" class="col-md-6 offset-md-3">
         <h1>Crie seu evento</h1>
-        <form action="/events" method="POST">
+        <form action="/events" method="POST" enctype="multipart/form-data">
             @csrf
+            <div class="form-gourp">
+                <label for="image">Image do evento:</label>
+                <input type="file" id="image" name="image" class="form-control-life"></input>
+            </div>
             <div class="form-gourp">
                 <label for="title">Nome do evento?</label>
                 <input type="text" class="form-control" id="title" name="title" required placeholder="Curso de PHP"></input>
