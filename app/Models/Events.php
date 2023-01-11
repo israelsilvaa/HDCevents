@@ -13,4 +13,5 @@ class Events extends Model
         'items' => 'array'
     ];
 
+    protected $dates = ['date'];
 }

@@ -20,6 +20,7 @@ class EventController extends Controller
     public function store(Request $request){
         $event = new Events;
         $event->title = $request->title;
+        $event->date = $request->date;
         $event->description = $request->description;
         $event->city = $request->city;
         $event->private = $request->private;
