@@ -4,18 +4,8 @@
 
 @section('content')
     
-       
-<div class="texte-center">
-    <spam>
-        <a href="/">
-            <ion-icon name="home-outline"></ion-icon>home
-        </a>
-        <a href="/contatos">Contatos</a>
-        <a href="/produtos">produtos</a>
-
-    </spam>
-
-
-</div>
+@foreach($events as $event)
+    <p>{{ $event->title }} -- {{ $event->description }}</p>
+@endforeach
  
 @endsection

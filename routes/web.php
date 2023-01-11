@@ -20,6 +20,5 @@ use App\Http\Controllers\ProdutosController;
 Route::get('/', [EventController::class, 'index']);
 Route::get('/events/create', [EventController::class, 'create']);
 Route::get('/contatos', [ContatosController::class, 'mostrarContato']);
-Route::get('/produtos', [ProdutosController::class, 'produtos']);
 
 
