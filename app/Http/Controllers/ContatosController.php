@@ -9,6 +9,8 @@ class ContatosController extends Controller
     public function mostrarContato(){
         return view('contatos');
     }
+
+    
 }
 
 ?>
