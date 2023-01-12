@@ -183,6 +183,10 @@
   #info-container #event-submit {
     margin: 20px 0;
   }
+
+  #description-container{
+    margin-top: 10px;
+  }
   
   /* footer */
   footer {
