@@ -17,7 +17,6 @@ class EventController extends Controller
         } else {
             $events = Events::all();
         }
-
         return view('welcome',['events' => $events, 'search' => $search] );
     }
 
@@ -34,7 +33,7 @@ class EventController extends Controller
         $event->private = $request->private;
         $event->items = $request->items;
 
-        // imagen upload
+        // imagem upload
         if($request->hasfile('image') && $request->file('image')->isValid()){
 
             $requestImage = $request->image;
