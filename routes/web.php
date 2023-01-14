@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\EventController;
 
-// GET:     pegar dados de busca.
-// POST:    criar eventos.
-// DELETE:  deletar eventos.
-// PUT:     atualizar eventos.
+// GET:     BUSCAR dados no banco.
+// POST:    SALVAR dados no banco.
+// DELETE:  DELETAR dados do banco.
+// PUT:     ATUALIZAR dados do banco.
 
 Route::get('/', [EventController::class, 'index']);//pagina inicial
 Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');//criar evento
@@ -29,4 +29,5 @@ Route::put('/events/update/{id}', [EventController::class, 'update'])->middlewar
 
 Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
 
+Route::post('events/join/{id}', [EventController::class, 'joinEvent'])->middleware('auth');
 
