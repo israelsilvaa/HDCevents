@@ -30,11 +30,9 @@
                     </div>
                 </div>
             @endforeach
-            {{-- feedback de quando não tem eventos
-            porem a "count($events)" retorna um array de obj, e não pode comparar com "0"   --}}
-            {{-- @if (count($events) == 0)
-            <p>Não há eventos disponíveis</p>
-       @endif --}}
+            @if(count($eventsAvailable) == 0)
+                <p>Não há eventos disponíveis</p>
+            @endif
         </div>
     </div>
 @endsection
